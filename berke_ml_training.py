@@ -91,6 +91,7 @@ class EnsembleFraudDetector:
         
         ensemble_scores = (rf_scores + pca_scores + kmeans_scores + dbscan_scores) / 4
         
+
         silhouette_avg = silhouette_score(X, kmeans_labels)
         print(f"Silhouette Score: {silhouette_avg:.4f}")
         
